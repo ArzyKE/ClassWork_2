@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private final SetName setName = new SetName();
-    private UserNameAdapter userNameAdapter;
+    private final UserNameAdapter userNameAdapter = new UserNameAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initiliazition() {
-        userNameAdapter = new UserNameAdapter(setName.getData());
         binding.recycler.setAdapter(userNameAdapter);
     }
 
     private void getData() {
+        userNameAdapter.setList(setName.getData());
     }
 }

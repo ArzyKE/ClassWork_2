@@ -17,7 +17,11 @@ public class UserNameAdapter extends RecyclerView.Adapter<UserNameAdapter.UserNa
 
     ArrayList<Sport> list;
 
-    public UserNameAdapter(ArrayList<Sport> list) {
+  //  public UserNameAdapter(ArrayList<Sport> list) {
+      //  this.list = list;
+   // }
+
+    public void setList(ArrayList<Sport> list) {
         this.list = list;
     }
 
